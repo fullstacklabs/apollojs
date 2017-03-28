@@ -133,7 +133,7 @@ function $defenum(fn, values) {
  */
 
 
-var $format = require('util').format;
+// var $format = require('util').format;
 
 
 
@@ -144,7 +144,7 @@ var $format = require('util').format;
  * @return {Error} generated Error instance
  */
 function $error() {
-  return new Error($format.apply(null, arguments));
+  return new Error(arguments);
 }
 
 
@@ -259,7 +259,7 @@ $define(global, {
   $declare: $declare,
   $inherit: $inherit,
   $defenum: $defenum,
-  $format: $format,
+  // $format: $format,
   $error: $error,
   $valueCopy: $valueCopy,
   $clone: $clone,
@@ -823,6 +823,3 @@ $define(JSON, {
 
 
 }
-
-
-
